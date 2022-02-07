@@ -1,8 +1,6 @@
 kubeconfig folder : ~/.kube
 gcloud auth application-default login
 
-GCR repo : gcr.io/searce-playground/saloni-test-image
-
 -------------------------------------------------------------------------
 Working wth cluster
 -------------------------------------------------------------------------
@@ -31,9 +29,9 @@ Multinode Cluster :-
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
-- role: control-plane
-- role: worker
-- role: worker
+role: control-plane
+role: worker
+role: worker
 
 save in : vi /tmp/kind.yaml
 run the command for multicluster : kind create cluster --config kind.yaml
